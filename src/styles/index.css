@@ -4,10 +4,12 @@ html {
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
   color: #121212;
+  height: 100%;
 }
 
 body {
   background-color: #121212;
+  height: 100%;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -50,7 +52,7 @@ input, label, button {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100%;
   margin: 0 auto;
   background-color: rgb(41, 39, 39);
 }
@@ -165,4 +167,65 @@ header {
   height: 40px;
   background-image: url(../images/avatar.png);
   margin-right: 13px;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.nav__item {
+  margin-right: 36px;
+}
+
+.footer__acvod {
+  color: rgba(255, 255, 255, 0.96);
+  text-align: start;
+  padding-top: 12px;
+}
+
+.footer__cards {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+
+.footer__card {
+  padding: 10px 14px;
+  width: 152px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 8px;
+  background-position: center;
+}
+
+.google-card {
+  background-image: url(../images/GP.png);
+  background-repeat: no-repeat;
+}
+
+.apple-card {
+  background-image: url(../images/AS.png);
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=index.css.map */
