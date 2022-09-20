@@ -1,8 +1,14 @@
+@charset "UTF-8";
 html {
   font-size: 10px;
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
   color: #121212;
+}
+
+body {
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 * {
@@ -14,10 +20,12 @@ html {
 
 a {
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 a:hover {
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.96);
 }
 
 ul {
@@ -38,9 +46,123 @@ input, label, button {
   cursor: pointer;
 }
 
-body {
+.page-wrapper {
+  max-width: 1200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: #121212;
-  color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+  background-color: rgb(41, 39, 39);
+}
+
+.сhips {
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.arrow {
+  width: 15px;
+  height: 10px;
+  background-image: url(../images/arrow.png);
+  background-repeat: no-repeat;
+}
+
+header {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-side-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Raleway";
+  color: #FDED28;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  margin-right: 60px;
+}
+
+.nav {
+  display: flex;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.6);
+}
+.nav a {
+  margin-right: 32px;
+}
+
+.selected-item {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.right-side-container {
+  display: flex;
+  align-items: center;
+}
+
+.header__button {
+  padding: 11px 16px;
+  width: 118px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.96);
+  border: none;
+  margin-right: 32px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.search {
+  display: flex;
+  margin-right: 32px;
+}
+
+.search__ico {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/search-ico.png);
+  background-repeat: no-repeat;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.search__input {
+  text-decoration: none;
+  outline: none;
+  background-color: inherit;
+  border: none;
+  width: 45px;
+  height: 21px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.account {
+  display: flex;
+  align-items: center;
+}
+
+.account__avatar {
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/avatar.png);
+  margin-right: 13px;
 }/*# sourceMappingURL=index.css.map */

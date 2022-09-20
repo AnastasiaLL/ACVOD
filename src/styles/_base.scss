@@ -6,6 +6,14 @@ html{
     // height: 100%; 
 }
 
+body {
+    // display: flex;
+    // justify-content: center;
+    background-color: $color-bg ;
+  //   height: 100%;
+    color: $color-shade-s;
+} 
+
 * {
     box-sizing: border-box;
     transition: 0.3s;
@@ -15,12 +23,12 @@ html{
 
 a{
   text-decoration: none;
-//   color: $color-primary;
+  color: $color-shade-xs;
 }
 
 a:hover{
   text-decoration: none;
-//   color: $color-secondary;
+   color: $color-shade-m;
 }
 
 ul{
@@ -36,10 +44,23 @@ input, label, button {
   cursor: pointer;
 }
 
-body {
+.page-wrapper{
+  max-width: 1200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: $color-bg ;
-//   height: 100%;
-  color: $color-shade-s;
-} 
+  margin: 0 auto;
+  background-color: rgb(41, 39, 39);
+}
+
+.сhips{
+  border-radius: 8px;
+  background-color: $color-shade-s;
+}
+
+.arrow{
+  width: 15px;
+  height: 10px;
+  background-image: url(../images/arrow.png);
+  background-repeat: no-repeat;
+}

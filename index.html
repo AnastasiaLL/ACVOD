@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@400;600&family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/normalize.css">
     <link rel="stylesheet" href="src/styles/index.css">
 
     <title>TV Channels</title>
@@ -15,22 +16,28 @@
 <body>
     <div class="page-wrapper">
         <header class="header">
-            <div class="logo"></div>
-            <nav class="nav">
-                <a href="#" class="nav__item">Movies</a>
-                <a href="#" class="nav__item">TV Shows</a>
-                <a href="#" class="nav__item">TV Channels</a>
-                <a href="#" class="nav__item">Watchlist</a>
-            </nav>
-            <button class="button сhips primary_сhips"> Try it for 10$ </button>
-            <div class="search">
-                <div class="search__ico"></div>
-                <input class="search__input" type="text" value="Search">
+            <div class="left-side-container">
+                <div class="logo"> ACVOD </div>
+                <nav class="nav">
+                    <a href="#" class="nav__item">Movies</a>
+                    <a href="#" class="nav__item">TV Shows</a>
+                    <a href="#" class="nav__item selected-item">TV Channels</a>
+                    <a href="#" class="nav__item">Watchlist</a>
+                </nav> 
             </div>
-            <div class="account">
-                <div class="account__avatar"></div>
-                <div class="arrow account__arrow"></div>
+            
+            <div class="right-side-container">
+               <button class="header__button сhips"> Try it for 10$ </button>
+                <div class="search">
+                    <div class="search__ico"></div>
+                    <input class="search__input" type="text" value="Search">
+                </div>
+                <div class="account">
+                    <div class="account__avatar"></div>
+                    <div class="arrow account__arrow"></div>
+                </div> 
             </div>
+            
         </header>
         <main class="main">
             <div class="page-path">

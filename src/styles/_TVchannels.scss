@@ -1,0 +1,110 @@
+// header start 
+
+header {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-side-container{
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Raleway';
+    color: #FDED28;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    margin-right: 60px;
+}
+
+.nav {
+    display: flex;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-shade-xs;
+
+    a {
+        margin-right: 32px;
+    }
+}
+
+.selected-item{
+    color: $color-shade-m;
+}
+
+.right-side-container{
+    display: flex;
+    align-items: center;
+}
+
+.header__button{
+    padding: 11px 16px;
+    width: 118px;
+    height: 40px; 
+    background-color: $color-shade;
+    color: $color-shade-m;
+    border: none;
+    margin-right: 32px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.search{
+    display: flex;
+    margin-right: 32px;
+}
+
+.search__ico{
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/search-ico.png);
+    background-repeat: no-repeat;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.search__input{
+    text-decoration: none;
+    outline: none;
+    background-color: inherit;
+    border: none;
+    width: 45px;
+    height: 21px;
+
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.96);
+
+}
+
+.account{
+    display: flex;
+    align-items: center;
+}
+
+.account__avatar{
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/avatar.png);
+    margin-right: 13px;
+}
+
+
+
+// header end
