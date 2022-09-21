@@ -73,7 +73,6 @@ h3 {
   height: 100%;
   margin: 0 auto;
   background-color: #121212;
-  border: 1px solid yellow;
 }
 
 .сhips {
@@ -94,10 +93,11 @@ h3 {
 }
 
 header {
-  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 26px;
+  margin-bottom: 26px;
 }
 
 .left-side-container {
@@ -400,7 +400,7 @@ main {
   cursor: pointer;
 }
 
-.channels__cards {
+.cards {
   display: flex;
   overflow: hidden;
   -moz-column-gap: 24px;
@@ -454,6 +454,86 @@ main {
 
 .TV {
   background-image: url(../images/channels-1000.png);
+}
+
+.federal-section h2 {
+  margin-bottom: 24px;
+}
+
+.federal__card:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.federal__preview {
+  width: 282px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.federal__name {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.federal__time {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.federal__description {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  margin-bottom: 10px;
+}
+
+.federal__channel-info {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.channel-info__logo {
+  width: 60px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.doctor {
+  background-image: url(../images/federal-1.png);
+}
+
+.Forged {
+  background-image: url(../images/federal-2.png);
+}
+
+.World {
+  background-image: url(../images/federal-3.png);
+}
+
+.Day {
+  background-image: url(../images/federal-4.png);
 }
 
 footer {

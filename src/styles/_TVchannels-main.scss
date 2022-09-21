@@ -237,7 +237,7 @@ main {
     }
 }
 
-.channels__cards{
+.cards{
     display: flex;
     overflow: hidden;
     column-gap: 24px;
@@ -291,6 +291,92 @@ main {
 }
 //channels-section end 
 
+//federal section start
 
+.federal-section {
+    h2 {
+        margin-bottom: 24px;
+    }
+}
+
+.federal__card{
+    &:hover{
+        cursor: pointer;
+        color: $color-shade-m;
+    }
+}
+
+.federal__preview{
+    width: 282px;
+    height: 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+.federal__name {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-shade-s;
+}
+
+.federal__time{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-shade-m;
+}
+
+.federal__description{
+    display: flex;
+    column-gap: 12px;
+    margin-bottom: 10px;
+}
+
+.federal__channel-info{
+    display: flex;
+    column-gap: 12px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-shade-m;
+}
+
+.channel-info__logo{
+    width: 60px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    border-radius: $L-radius;
+    background-color: rgba(255, 255, 255, 0.08);
+
+}
+
+.doctor{
+    background-image: url(../images/federal-1.png);
+}
+.Forged{
+    background-image: url(../images/federal-2.png);
+}
+.World{
+    background-image: url(../images/federal-3.png);
+}
+.Day{
+    background-image: url(../images/federal-4.png);
+}
+
+
+
+//federal section end
 
 //main end
