@@ -37,27 +37,50 @@ main {
 
 .program {
     display: flex;
+    // flex-direction: column;
+    
+    @include media-tablet {
+        max-width: 690px;
+        flex-direction: column;
+        margin: 0 auto;
+        padding-bottom: 24px;
+    }
 }
 
 .program__player{
-    width: 1027px;
-    height: 400px;
-    background-image: url(../images/main-img.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    /* align-items: flex-end; */
+    /* justify-content: space-between; */
     margin-right: 24px;
-
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
     color: rgba(255, 255, 255, 0.96);
-
     border-radius: 8px;
+    flex-direction: column;
+    width: 60%;
+
+    
+
+    @include media-tablet {
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+}
+.player__img {
+    max-width: 690px;
+    height: 400px;
+    background-image: url(../images/main-img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @include media-mobile {
+        background-image: url(../images/main-img-mobile.png);
+    }
 }
 
 .player__name {
@@ -87,12 +110,25 @@ main {
 .program__info{
     display: flex;
     flex-direction: column;
+    // width: 40%;
+    max-width: 486px;
+    
+    @include media-tablet {
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    @include media-mobileL {
+        overflow: hidden;
+        margin: 0;
+    }
+
 }
 
 .program-nav{
     display: flex;
     column-gap: 12px;
     margin-bottom: 16px;
+    width: 485px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -151,7 +187,7 @@ main {
     display: flex;
     flex-direction: column;
     column-gap: 16px;
-    width: 438px;
+    max-width: 438px;
     margin-bottom: 24px;
 }
 
@@ -178,11 +214,13 @@ main {
     font-size: 14px;
     line-height: 150%;
     color: $color-shade-xs;
+
+
 }
 
 
 .program__description {
-    width: 50%;
+    width: 85%;
     margin-top: 24px;
 
 
@@ -192,6 +230,10 @@ main {
     font-size: 16px;
     line-height: 150%;
     color: $color-shade-m;
+
+    @include media-tablet {
+        width: 100%
+    }
 }
 
 .description__title{
@@ -239,9 +281,13 @@ main {
 
 .cards{
     display: flex;
-    overflow: hidden;
+    // overflow: hidden;
     column-gap: 24px;
+    overflow-x: scroll;
 
+    &::-webkit-scrollbar {
+        width: 0px;
+    }    
 }
 
 .channels__card {
@@ -341,6 +387,7 @@ main {
 .federal__channel-info{
     display: flex;
     column-gap: 12px;
+    align-items: center;
 
     font-family: 'Open Sans';
     font-style: normal;
@@ -373,6 +420,9 @@ main {
 }
 .Day{
     background-image: url(../images/federal-4.png);
+}
+.HBO-Lorem{
+    background-image: url(../images/federal-5.png);
 }
 
 

@@ -7,6 +7,10 @@ footer {
     padding-top: 40px;
     padding-bottom: 40px;
 
+    @include media-tablet {
+        flex-direction: column;
+    }
+
     // border: 2px solid;
 }
 .footer__info{
@@ -21,24 +25,44 @@ footer {
     text-align: center;
 
     color: $color-shade-xs;
+
+    @include media-tablet {
+        order: 1;
+    }
 }
   
+.footer__nav {
+    @include media-tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 
 .nav__item {
     margin-right: 36px;
 }
 
-
 .footer__acvod {
     color: $color-shade-m;
     text-align: start;
     padding-top: 12px;
+
+    @include media-tablet {
+        margin: 0 auto;
+    }
 }
 
 .footer__cards{
     display: flex;
     column-gap: 12px;
+
+    @include media-tablet {
+        order: 0;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
 }
+
 .footer__card{
     padding: 10px 14px;
     width: 152px;

@@ -1,6 +1,8 @@
 $desktop-width: 1280px;
-$tablet-width: 768px;
-$mobile-width: 320px;
+$tablet-width: 1020px;
+$mobile-width: 350px;
+
+$mobileL-width: 517px;
 
 $L-radius: 8px;
 $S-radius: 6px;
@@ -26,6 +28,10 @@ $color-bg: #121212;
 
 @mixin media-mobile{
     @media (max-width: $mobile-width) { @content; }
+}
+
+@mixin media-mobileL{
+    @media (max-width: $mobileL-width) { @content; }
 }
 
 

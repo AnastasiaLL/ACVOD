@@ -36,6 +36,10 @@ header {
     a {
         margin-right: 32px;
     }
+
+    @include media-tablet {
+        display: none;
+    }
 }
 
 .selected-item{
@@ -61,11 +65,20 @@ header {
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
+
+    @include media-tablet {
+        display: none;
+    }
 }
 
 .search{
     display: flex;
     margin-right: 32px;
+
+    @include media-tablet {
+        margin-right: 24px;
+    }
+    
 }
 
 .search__ico{
@@ -92,6 +105,9 @@ header {
     line-height: 150%;
     color: rgba(255, 255, 255, 0.96);
 
+    @include media-tablet {
+        display: none;
+    }
 }
 
 .account{
@@ -104,8 +120,34 @@ header {
     height: 40px;
     background-image: url(../images/avatar.png);
     margin-right: 13px;
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.account__arrow{
+    @include media-tablet {
+        display: none;
+    }
 }
 
 // header end
 
+//header burger start 
 
+.burger {
+    display: none;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/burger.png);
+    background-repeat: no-repeat;
+    // margin: 9px;
+    background-position: center;
+
+    
+    @include media-tablet {
+        display: block;
+    }
+    
+}

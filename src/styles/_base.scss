@@ -63,7 +63,7 @@ h3 {
 
 
 .page-wrapper{
-  max-width: 1200px;
+  max-width: 1360px;
   display: flex;
   flex-direction: column;
   // justify-content: space-between;
@@ -71,6 +71,13 @@ h3 {
   margin: 0 auto;
   background-color: $color-bg;
   // border: 1px solid yellow;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  @include media-tablet {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .сhips{
