@@ -43,6 +43,25 @@ input, label, button {
   cursor: pointer;
 }
 
+h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  color: $color-shade-l;
+}
+
+h3 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-shade-m;
+}
+
+
 .page-wrapper{
   max-width: 1200px;
   display: flex;
@@ -50,12 +69,13 @@ input, label, button {
   // justify-content: space-between;
   height: 100%;
   margin: 0 auto;
-  background-color: rgb(41, 39, 39);
+  background-color: $color-bg;
+  border: 1px solid yellow;
 }
 
 .сhips{
   border-radius: $L-radius;
-  background-color: $color-shade-s;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .arrow{
@@ -63,4 +83,9 @@ input, label, button {
   height: 10px;
   background-image: url(../images/arrow.png);
   background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.arrow-open {
+  transform: rotateX(180deg);
 }
