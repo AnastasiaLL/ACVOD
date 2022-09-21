@@ -21,6 +21,7 @@ main {
     color: rgba(255, 255, 255, 0.96);
 }
 
+//program-section start
 
 .channel-name {
     font-family: 'Montserrat';
@@ -202,4 +203,94 @@ main {
         padding-bottom: 18px;
     }
 }
+
+//program-section end
+
+//channels-section start 
+
+.channels-section {
+    margin-bottom: 40px;
+}
+
+.channels__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.channels__nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.channels__show {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-shade-s;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.channels__cards{
+    display: flex;
+    overflow: hidden;
+    column-gap: 24px;
+
+}
+
+.channels__card {
+    &:hover{
+        cursor: pointer;
+        color: $color-shade-m;
+    }
+}
+.channel__name {
+    // color: $color-shade-xs;
+    &:hover{
+        cursor: pointer;
+        color: $color-shade-m;
+    }
+}
+.selected-name{
+    color: $color-shade-m;
+}
+
+.channel__logo{
+    width: 180px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.FOX{
+    background-image: url(../images/channels-fox.png);
+}
+.HBO{
+    background-image: url(../images/channels-hbo.png);
+}
+.Channel{
+    background-image: url(../images/channels-bbc.png);
+}
+.Sony{
+    background-image: url(../images/channels-sony.png);
+}
+.History{
+    background-image: url(../images/channels-history.png);
+}
+.TLC{
+    background-image: url(../images/channels-tlc.png);
+}
+.TV{
+    background-image: url(../images/channels-1000.png);
+}
+//channels-section end 
+
+
+
 //main end
