@@ -72,16 +72,17 @@ main {
 }
 .player__img {
     max-width: 690px;
-    height: 400px;
-    background-image: url(../images/main-img.png);
-    background-size: contain;
-    background-repeat: no-repeat;
     position: relative;
 
     @include media-mobile {
-        background-image: url(../images/main-img-mobile.png);
+        // background-image: url(../images/main-img-mobile.png);
+    }
+    img {
+        width: 100%;
+        height: auto;
     }
 }
+
 
 .player__name {
     font-size: 38px;
@@ -181,6 +182,11 @@ main {
         // background: rgba(255, 255, 255, 0.2);
         // border-radius: 6px;
     }
+    
+    @include media-tablet {
+        height: 315px;
+    }
+
 }
 
 .program__item {
@@ -236,6 +242,32 @@ main {
     }
 }
 
+.expand {
+    display: none;
+    cursor: pointer;
+    color: $color-shade-xs;
+
+    @include media-tablet {
+        display: block;
+        margin-bottom: 13px;
+    }
+}
+.reduce {
+    cursor: pointer;
+    color: $color-shade-xs;
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.reduce-title{
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
 .description__title{
     margin-bottom: 24px;
 }
@@ -252,6 +284,9 @@ main {
 
 .channels-section {
     margin-bottom: 40px;
+    @include media-tablet {
+        margin-bottom: 7px;
+    }
 }
 
 .channels__info {

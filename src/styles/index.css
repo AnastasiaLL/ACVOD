@@ -313,16 +313,11 @@ main {
 
 .player__img {
   max-width: 690px;
-  height: 400px;
-  background-image: url(../images/main-img.png);
-  background-size: contain;
-  background-repeat: no-repeat;
   position: relative;
 }
-@media (max-width: 350px) {
-  .player__img {
-    background-image: url(../images/main-img-mobile.png);
-  }
+.player__img img {
+  width: 100%;
+  height: auto;
 }
 
 .player__name {
@@ -413,6 +408,11 @@ main {
 .program__schedule::-webkit-scrollbar {
   width: 0px;
 }
+@media (max-width: 1020px) {
+  .program__schedule {
+    height: 315px;
+  }
+}
 
 .program__item {
   display: flex;
@@ -461,6 +461,34 @@ main {
   }
 }
 
+.expand {
+  display: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media (max-width: 1020px) {
+  .expand {
+    display: block;
+    margin-bottom: 13px;
+  }
+}
+
+.reduce {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media (max-width: 1020px) {
+  .reduce {
+    display: none;
+  }
+}
+
+@media (max-width: 1020px) {
+  .reduce-title {
+    display: none;
+  }
+}
+
 .description__title {
   margin-bottom: 24px;
 }
@@ -471,6 +499,11 @@ main {
 
 .channels-section {
   margin-bottom: 40px;
+}
+@media (max-width: 1020px) {
+  .channels-section {
+    margin-bottom: 7px;
+  }
 }
 
 .channels__info {
