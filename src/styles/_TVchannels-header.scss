@@ -1,0 +1,153 @@
+// header start 
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+
+.left-side-container{
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Raleway';
+    color: #FDED28;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    margin-right: 60px;
+}
+
+.nav {
+    display: flex;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-shade-xs;
+
+    a {
+        margin-right: 32px;
+    }
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.selected-item{
+    color: $color-shade-m;
+}
+
+.right-side-container{
+    display: flex;
+    align-items: center;
+}
+
+.header__button{
+    padding: 11px 16px;
+    width: 118px;
+    height: 40px; 
+    background-color: $color-shade;
+    color: $color-shade-m;
+    border: none;
+    margin-right: 32px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.search{
+    display: flex;
+    margin-right: 32px;
+
+    @include media-tablet {
+        margin-right: 24px;
+    }
+    
+}
+
+.search__ico{
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/search-ico.png);
+    background-repeat: no-repeat;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.search__input{
+    text-decoration: none;
+    outline: none;
+    background-color: inherit;
+    border: none;
+    width: 45px;
+    height: 21px;
+
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.96);
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.account{
+    display: flex;
+    align-items: center;
+}
+
+.account__avatar{
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/avatar.png);
+    margin-right: 13px;
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.account__arrow{
+    @include media-tablet {
+        display: none;
+    }
+}
+
+// header end
+
+//header burger start 
+
+.burger {
+    display: none;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/burger.png);
+    background-repeat: no-repeat;
+    // margin: 9px;
+    background-position: center;
+
+    
+    @include media-tablet {
+        display: block;
+    }
+    
+}
