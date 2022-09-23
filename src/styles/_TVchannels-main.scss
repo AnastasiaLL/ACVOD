@@ -1,0 +1,467 @@
+//main start
+
+main {
+    flex: 1 0 auto;
+}
+
+
+.page-path{
+    display: flex;
+    column-gap: 4px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;  
+    margin-bottom: 24px;  
+    margin-top: 8px;
+}
+
+.selected-link {
+    color: rgba(255, 255, 255, 0.96);
+}
+
+//program-section start
+
+.channel-name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    color: $color-shade-m;
+    
+    margin-bottom: 17px;  
+    
+}
+
+.program {
+    display: flex;
+    // flex-direction: column;
+    
+    @include media-tablet {
+        max-width: 690px;
+        flex-direction: column;
+        margin: 0 auto;
+        padding-bottom: 24px;
+    }
+}
+
+.program__player{
+    display: flex;
+    /* align-items: flex-end; */
+    /* justify-content: space-between; */
+    margin-right: 24px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.96);
+    border-radius: 8px;
+    flex-direction: column;
+    width: 60%;
+
+    
+
+    @include media-tablet {
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+}
+.player__img {
+    max-width: 690px;
+    position: relative;
+
+    @include media-mobile {
+        // background-image: url(../images/main-img-mobile.png);
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.player__name {
+    font-size: 38px;
+    position: absolute;
+    bottom: 30px;
+    left: 18px;
+}
+
+
+.player__live {
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    
+
+    &::before{
+        content: url(../images/dot.png);
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+    }
+
+}    
+
+.program__info{
+    display: flex;
+    flex-direction: column;
+    // width: 40%;
+    max-width: 486px;
+    
+    @include media-tablet {
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    @include media-mobileL {
+        overflow: hidden;
+        margin: 0;
+    }
+
+}
+
+.program-nav{
+    display: flex;
+    column-gap: 12px;
+    margin-bottom: 16px;
+    width: 485px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-shade-xs;
+}
+
+.program-nav__date{
+    width: 87.6px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+
+    &:hover{
+        cursor: pointer;
+        color: $color-shade-m;
+    }
+}
+
+.selected-date {
+    color: $color-shade-m;
+    &::before{
+        content: url(../images/dot.png);
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+    }
+}
+
+.program__schedule {
+    overflow: scroll;
+    padding: 24px;
+    padding-bottom: 0px;
+    height: 344px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-shade-s;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        // width: 6px;
+        // height: 40px;
+
+        // background: rgba(255, 255, 255, 0.2);
+        // border-radius: 6px;
+    }
+    
+    @include media-tablet {
+        height: 315px;
+    }
+
+}
+
+.program__item {
+    display: flex;
+    flex-direction: column;
+    column-gap: 16px;
+    max-width: 438px;
+    margin-bottom: 24px;
+}
+
+.item__title{
+    display: flex;
+}
+
+.item__name {
+    width: 70%;
+}
+
+.item__time {
+    width: 30%;
+    // width: 80px;
+    // height: 24px;
+}
+
+.item__description {
+    padding-left: 29%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-shade-xs;
+
+
+}
+
+
+.program__description {
+    width: 85%;
+    margin-top: 24px;
+
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-shade-m;
+
+    @include media-tablet {
+        width: 100%
+    }
+}
+
+.expand {
+    display: none;
+    cursor: pointer;
+    color: $color-shade-xs;
+
+    @include media-tablet {
+        display: block;
+        margin-bottom: 13px;
+    }
+}
+.reduce {
+    cursor: pointer;
+    color: $color-shade-xs;
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.reduce-title{
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.description__title{
+    margin-bottom: 24px;
+}
+
+.description__subtitle {
+    p {
+        padding-bottom: 18px;
+    }
+}
+
+//program-section end
+
+//channels-section start 
+
+.channels-section {
+    margin-bottom: 40px;
+    @include media-tablet {
+        margin-bottom: 7px;
+    }
+}
+
+.channels__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.channels__nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.channels__show {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-shade-s;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.cards{
+    display: flex;
+    // overflow: hidden;
+    column-gap: 24px;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }    
+}
+
+.channels__card {
+    &:hover{
+        cursor: pointer;
+        color: $color-shade-m;
+    }
+}
+.channel__name {
+    // color: $color-shade-xs;
+    &:hover{
+        cursor: pointer;
+        color: $color-shade-m;
+    }
+}
+.selected-name{
+    color: $color-shade-m;
+}
+
+.channel__logo{
+    width: 180px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.FOX{
+    background-image: url(../images/channels-fox.png);
+}
+.HBO{
+    background-image: url(../images/channels-hbo.png);
+}
+.Channel{
+    background-image: url(../images/channels-bbc.png);
+}
+.Sony{
+    background-image: url(../images/channels-sony.png);
+}
+.History{
+    background-image: url(../images/channels-history.png);
+}
+.TLC{
+    background-image: url(../images/channels-tlc.png);
+}
+.TV{
+    background-image: url(../images/channels-1000.png);
+}
+//channels-section end 
+
+//federal section start
+
+.federal-section {
+    h2 {
+        margin-bottom: 24px;
+    }
+}
+
+.federal__card{
+    &:hover{
+        cursor: pointer;
+        color: $color-shade-m;
+    }
+}
+
+.federal__preview{
+    width: 282px;
+    height: 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+.federal__name {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-shade-s;
+}
+
+.federal__time{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-shade-m;
+}
+
+.federal__description{
+    display: flex;
+    column-gap: 12px;
+    margin-bottom: 10px;
+}
+
+.federal__channel-info{
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-shade-m;
+}
+
+.channel-info__logo{
+    width: 60px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    border-radius: $L-radius;
+    background-color: rgba(255, 255, 255, 0.08);
+
+}
+
+.doctor{
+    background-image: url(../images/federal-1.png);
+}
+.Forged{
+    background-image: url(../images/federal-2.png);
+}
+.World{
+    background-image: url(../images/federal-3.png);
+}
+.Day{
+    background-image: url(../images/federal-4.png);
+}
+.HBO-Lorem{
+    background-image: url(../images/federal-5.png);
+}
+
+
+
+//federal section end
+
+//main end
