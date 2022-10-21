@@ -1,74 +1,96 @@
 const path = require('path');
+const { merge } = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const EslingPlugin = require('eslint-webpack-plugin');
+////////////////////////////////////////////////////////////
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
-module.exports = {
-    context: path.resolve(__dirname, 'src'),
-    entry: './index.js',
+const baseConfig = {
+    entry: path.resolve(__dirname, './src/index.js'),
     mode: 'development',
-    devtool: 'inline-source-map',
-    devServer: {
-        /** Будет запускать сервер на localhost:8080 в этой папке*/
-        contentBase: './dist',
-    },
-    watch: true,
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
     module: {
         rules: [
-            /** Babel **/
-            // {
-            //     test: /\.m?js$/,
-            //     exclude: /(node_modules|bower_components)/,
-            //     use: {
-            //         loader: 'babel-loader',
-            //         options: {
-            //             presets: ['@babel/preset-env']
-            //         }
-            //     }
-            //     // npm install babel-loader @babel/core @babel/preset-env -D
-            // },
-            /** CSS */
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
-                // npm i style-loader css-loader -D
             },
-            /** SCSS/SAAS */
+            // {
+            //     test: /\.[tj]s$/,
+            //     use: 'ts-loader',
+            //     exclude: /node_modules/,
+            // },
+
+            {
+                test: /\.(?:ico|gif|png|jpg|jpeg|svg|webp)$/i,
+                type: 'asset/resource',
+            },
+
+            ////////////////////        all this add:
+            {
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
+            },
+
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    // Creates `style` nodes from JS strings
-                    "style-loader",
-                    // Translates CSS into CommonJS
-                    "css-loader",
-                    // Compiles Sass to CSS
-                    "sass-loader",
+                //   // Creates `style` nodes from JS strings
+                //   "style-loader",
+                //   // Translates CSS into CommonJS
+                //   "css-loader",
+                //   // Compiles Sass to CSS
+                  "sass-loader",
                 ],
-                // npm i style-loader css-loader sass sass-loader -D
             },
-            /** Картинки */
+
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
-            },
-            /** Шрифты */
-            {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/resource',
-            },
-            /** Файлы CSV */
-            {
-                test: /\.(csv|tsv)$/i,
-                use: ['csv-loader'],
-                // npm i csv-loader -D
-            },
-            /** Файлы XML */
-            {
-                test: /\.xml$/i,
-                use: ['xml-loader'],
-                // npm i xml-loader -D 
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-env']
+                  }
+                }
             },
         ],
     },
+    resolve: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+    },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, './dist'),
+        assetModuleFilename: '[file]',
+    },
+
+                       //add
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, './src/index.html'),
+            filename: 'index.html',
+        }),
+        new CleanWebpackPlugin(),
+        // new EslingPlugin({ extensions: 'ts' }),
+
+        new MiniCssExtractPlugin(),     //add
+        
+    ],
+ 
+    optimization: {         //add
+        minimizer: [
+          new CssMinimizerPlugin(),
+        ],
+        runtimeChunk: 'single',         //add
+    }    
+};
+
+module.exports = ({ mode }) => {
+
+    const isProductionMode = mode === 'prod';
+    const envConfig = isProductionMode ? require('./webpack.prod.config') : require('./webpack.dev.config');
+
+    return merge(baseConfig, envConfig);
 };
