@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "webpack --config ./webpack.config.js --env mode=prod",
-    "start": "webpack serve --open",
+    "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
     "style": "sass src/styles/index.scss dist/styles/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -755,6 +755,11 @@ footer {
   background-repeat: no-repeat;
 }
 
+.apple {
+  background-image: url(../images/main-img.png);
+  background-repeat: no-repeat;
+}
+
 .apple-card {
   background-image: url(../images/AS.png);
   background-repeat: no-repeat;
