@@ -393,6 +393,11 @@ main {
   margin-right: 8px;
 }
 
+.apple {
+  background-image: url(../images/main-img.png);
+  background-repeat: no-repeat;
+}
+
 .program__schedule {
   overflow: scroll;
   padding: 24px;
@@ -752,11 +757,6 @@ footer {
 
 .google-card {
   background-image: url(../images/GP.png);
-  background-repeat: no-repeat;
-}
-
-.apple {
-  background-image: url(../images/main-img.png);
   background-repeat: no-repeat;
 }
 

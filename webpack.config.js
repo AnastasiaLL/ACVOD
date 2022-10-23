@@ -7,22 +7,17 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const baseConfig = {
     entry: path.resolve(__dirname, './src/index.js'),
-    mode: 'development',
+    // mode: 'development',
     module: {
       rules: [
-          // {
-          //     test: /\.css$/i,
-          //     use: ['style-loader', 'css-loader'],
-          // },
+          {
+              test: /\.css$/i,
+              use: ['style-loader', 'css-loader'],
+          },
 
           {
               test: /\.(?:ico|gif|png|jpg|jpeg|svg|webp)$/i,
               type: 'asset/resource',
-          },
-
-          {
-              test: /\.css$/i,
-              use: [MiniCssExtractPlugin.loader, "css-loader"],
           },
 
           {
@@ -39,16 +34,11 @@ const baseConfig = {
               exclude: /(node_modules|bower_components)/,
               use: {
                 loader: 'babel-loader',
-                options: {
-                  presets: ['@babel/preset-env']
-                }
               }
           },
       ],
     },
-    resolve: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
-    },
+
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, './dist'),
@@ -56,24 +46,21 @@ const baseConfig = {
     },
 
     plugins: [
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/index.html'),
-            filename: 'index.html',
-        }),
-        new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin(),  
-        
+      new HtmlWebpackPlugin({
+          template: path.resolve(__dirname, './src/index.html'),
+          filename: 'index.html',
+      }),
+      new CleanWebpackPlugin(),
     ],
 
     performance: {
       hints: false,
     },
  
-    optimization: {         
-        minimizer: [
-          new CssMinimizerPlugin(),
-        ],
-        runtimeChunk: 'single',         
+    optimization: {  
+      minimizer: [
+        new CssMinimizerPlugin(),
+      ],
     }    
 };
 
